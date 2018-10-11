@@ -1,0 +1,2 @@
+class AssistsTargetController < ApplicationController
+end
