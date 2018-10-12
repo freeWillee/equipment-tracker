@@ -5,13 +5,15 @@ class SessionsController < ApplicationController
     end
 
     post '/sessions' do
-        session[:username] = params[:username]
+        login(params[:username])
 
-        redirect "/user"
+        redirect "/users"
     end
 
     get '/logout' do
-        session.clear
+        logout!
+
+        redirect '/users'
     end    
 
 end
