@@ -5,7 +5,9 @@ class SessionsController < ApplicationController
     end
 
     post '/sessions' do
-        raise params.inspect
+        session[:email] = params[:email]
+
+        redirect '/user'
     end
 
 end
