@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-    get "/user" do
-        "Your user login is: #{session[:email]}"
+    get "/user/:username" do
+        "Your user login is: #{session[:username]}"
     end
 
 end
