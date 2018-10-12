@@ -1,7 +1,7 @@
 class GoalsController < ApplicationController
     get '/goals/new' do
         #Check that user is logged in
-        if !session[:username]
+        if !logged_in?
             redirect '/login'
         else
             "Render a new goals form"
@@ -10,11 +10,10 @@ class GoalsController < ApplicationController
 
     get '/goals/edit' do
        #Check that user is logged in
-       if !session[:username]
-        redirect '/login'
-    else
-        "Render an edit goals form"
-    end
-end 
+        if !logged_in?
+            redirect '/login'
+        else
+            "Render an edit goals form"
+        end
     end
 end
