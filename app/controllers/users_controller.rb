@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-    get "/user" do
-        "Your user login is: #{session[:username]}"
+    get "/users" do
+        "Show all user stats, goals, and differential"
     end
 
 end
