@@ -7,7 +7,11 @@ class SessionsController < ApplicationController
     post '/sessions' do
         session[:username] = params[:username]
 
-        redirect "/user/#{session[:username]}
+        redirect "/user/#{session[:username]}"
     end
+
+    get '/logout' do
+        session.clear
+    end    
 
 end
