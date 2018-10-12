@@ -7,4 +7,14 @@ class GoalsController < ApplicationController
             "Render a new goals form"
         end
     end
+
+    get '/goals/edit' do
+       #Check that user is logged in
+       if !session[:username]
+        redirect '/login'
+    else
+        "Render an edit goals form"
+    end
+end 
+    end
 end
