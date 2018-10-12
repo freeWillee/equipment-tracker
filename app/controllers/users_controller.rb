@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    get "/user/:username" do
+    get "/user" do
         "Your user login is: #{session[:username]}"
     end
 

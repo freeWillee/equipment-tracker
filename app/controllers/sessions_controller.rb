@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     post '/sessions' do
         session[:username] = params[:username]
 
-        redirect "/user/#{session[:username]}"
+        redirect "/user"
     end
 
     get '/logout' do
