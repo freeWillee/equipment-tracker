@@ -4,4 +4,8 @@ class SessionsController < ApplicationController
         erb :"sessions/login.html"
     end
 
+    post '/sessions' do
+        raise params.inspect
+    end
+
 end
