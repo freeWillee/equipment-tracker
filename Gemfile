@@ -8,7 +8,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gem 'sinatra'
 gem 'sqlite3'
-gem 'activerecord', '4.2.5' :reqiure => "active_record"
+gem 'activerecord', '4.2.5'
 gem 'rake'
 gem 'pry'
 gem 'shotgun'
